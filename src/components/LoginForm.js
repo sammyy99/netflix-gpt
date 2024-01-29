@@ -35,7 +35,7 @@ const LoginForm = () => {
 
                     }).then(() => {
 
-                        const { uid, email, displayName } = auth.currentUser;
+                        const { uid, email, displayName } = auth.currentUser;  // used "user" here earlier but its not fully updated so using auth.currentUser
                         dispatch(addUser({ uid: uid, email: email, displayName: displayName}))
                         navigate("/browse")
                     }).catch((error) => {
@@ -56,7 +56,7 @@ const LoginForm = () => {
             signInWithEmailAndPassword(auth, email.current.value, pwd.current.value)
                 .then((userCredential) => {
                     // Signed in 
-                    const user = userCredential.user;
+                    //const user = userCredential.user;
                     navigate("/browse")
                 })
                 .catch((error) => {
