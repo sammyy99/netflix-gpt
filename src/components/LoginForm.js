@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { proflieIcon } from "../utils/urls";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/user";
+import Authentication from "../utils/Authentication";
 
 const LoginForm = () => {
 
@@ -42,7 +43,6 @@ const LoginForm = () => {
                         setValidationMsg(error.message)
                     });
 
-                    //navigate("/browse")
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -79,6 +79,7 @@ const LoginForm = () => {
     }
 
     return (
+        <div> <Authentication/>
         <form onSubmit={handleOnSubmit} className='bg-black  py-16 px-20 rounded-lg bg-opacity-80'>
             <h1 className='text-4xl font-semi-bold text-white py-2'>{isSignUp ? "Sign in" : "Sign Up"}</h1>
 
@@ -106,6 +107,7 @@ const LoginForm = () => {
                 </div>
             </div>
         </form>
+        </div>
     )
 }
 
