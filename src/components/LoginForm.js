@@ -5,7 +5,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { proflieIcon } from "../utils/urls";
 import { useDispatch } from "react-redux";
-import { addUser } from "../redux/user";
+import { addUser } from "../redux/userSlice";
 import Authentication from "../utils/Authentication";
 
 const LoginForm = () => {

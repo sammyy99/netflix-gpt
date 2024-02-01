@@ -3,11 +3,13 @@ import { netflixIcon, proflieIcon } from "../utils/urls"
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import Authentication from "../utils/Authentication"
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 
 const Browse = () => {
 
+  useNowPlayingMovies() // Used Custom Hook
   const navigate = useNavigate()
-
+  
   const handleOnSignOut = () => {
     signOut(auth).then(() => {
       navigate("/")
