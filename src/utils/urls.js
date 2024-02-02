@@ -11,3 +11,7 @@ export const APIOptions = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYzVmMDJiNThjZmFhN2ZlMjc3NDI5YmIyNzk0MmIyMSIsInN1YiI6IjY1Yjk3NWJmNWJlMDBlMDE2MTVhMzEzZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qmO1W2wJtMJVKGhv0yCOl89aApNEFaeSk0NxBcemWkE'
     }
   };
+
+export const playIcon = "https://cdn-icons-png.flaticon.com/512/727/727245.png"
+
+export const infoIcon = "https://www.pngitem.com/pimgs/m/340-3406810_info-icon-white-white-info-icon-png-transparent.png"
