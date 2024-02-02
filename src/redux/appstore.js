@@ -6,7 +6,7 @@ const appstore = configureStore(
     {
   reducer:{
     user: userReducer,
-    nowPlayingMovies : moviesReducer
+    movies : moviesReducer
   }
     }
 )

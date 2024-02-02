@@ -16,7 +16,6 @@ const useMovieTrailer = (id) => {
       const trailer = json.results.filter((clip) => {
         return clip.name === "Official Trailer";
       });
-      console.log(trailer)
   
       dispatch(addMovieTrailer(trailer[0]));
     };

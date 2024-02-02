@@ -4,7 +4,7 @@ import MainContainerTitle from './MainContianerTitle';
 import MainContainerVideoBG from './MainContainerVideoBG';
 
 const BrowseMainContainer = () => {
-  const movies = useSelector((store) => store.nowPlayingMovies.nowPlayingMovies);
+  const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   
   if (!movies || movies.length === 0) return
 
