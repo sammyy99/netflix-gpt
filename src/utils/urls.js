@@ -17,3 +17,5 @@ export const playIcon = "https://cdn-icons-png.flaticon.com/512/727/727245.png"
 export const infoIcon = "https://www.pngitem.com/pimgs/m/340-3406810_info-icon-white-white-info-icon-png-transparent.png"
 
 export const posterURL = "https://image.tmdb.org/t/p/w500"
+
+export const GPT_API_Key = "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"

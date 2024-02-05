@@ -8,7 +8,7 @@ const BrowseMainContainer = () => {
   
   if (!movies || movies.length === 0) return
 
-  const mainMovie = movies[0];
+  const mainMovie = movies[1];
   const {original_title,overview,id} = mainMovie
 
   return (
