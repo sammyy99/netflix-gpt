@@ -18,4 +18,4 @@ export const infoIcon = "https://www.pngitem.com/pimgs/m/340-3406810_info-icon-w
 
 export const posterURL = "https://image.tmdb.org/t/p/w500"
 
-export const GPT_API_Key = "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"
+export const GPT_API_Key = "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"
