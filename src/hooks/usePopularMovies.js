@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { addPopularMovies } from "../redux/moviesSlice";
 import { APIOptions } from "../utils/urls";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const usePopularMovies = ()=>{ // Custom HOOK
 
 const dispatch = useDispatch()
+const topRatedMovies = useSelector((store)=>{return store.movies?.topRatedMovies})
 const popularMoviesAPI = async () => {  // Fetching data and stroing indside redux store
 
     const data = await fetch(
@@ -18,7 +19,7 @@ const popularMoviesAPI = async () => {  // Fetching data and stroing indside red
   };
 
   useEffect(()=>{
-     popularMoviesAPI()
+    !topRatedMovies && popularMoviesAPI()
   },[])
 }
 
