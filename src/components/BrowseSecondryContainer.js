@@ -11,7 +11,7 @@ const BrowseSecondryContainer = () => {
 
   return (
     <div className='bg-black bg-opacity-95'>
-      <div className='-mt-44'>
+      <div className='-mt-56'>
         <MovieList title={"Now Playing"} movies={movies}/>
         <MovieList title={"Top Rated"} movies={movies3}/>
         <MovieList title={"Popular Movies"} movies={movies2}/>
