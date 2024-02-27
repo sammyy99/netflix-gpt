@@ -30,7 +30,10 @@ const GptSearchBar = () => {
               return chatCompletion.choices[0].message.content
           }
           const resultString = await gptAnswer()
-          const result = resultString.split(", ")
+          const result = resultString.split(",")
+          console.log("Movies String- "+resultString)
+          console.log("Movies array- "+result)
+        
 
           const moviePromises = result.map((movie)=>{
              return getTmdbMovies(movie)
@@ -38,7 +41,7 @@ const GptSearchBar = () => {
           //console.log("Map done") //- See this console log will be called immidiately once moviePromises are called and getTmdbMovies function is called 5 times but that is async function so to get the value of moviePromise we need to wait and use PromiseAll and during the time moviePromise dosent get the value it will have Promise and we cant use those promise as value in program.
           const movieList = await Promise.all(moviePromises)
           if(!movieList || !result) return;
-          console.log(movieList)
+          console.log("Movie List"+movieList)
           dispatch(addSearchedMovies(movieList))
           dispatch(addGptMovies(result))
     }
